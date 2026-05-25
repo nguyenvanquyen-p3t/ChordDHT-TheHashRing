@@ -1,0 +1,614 @@
+version: '3.8'
+services:
+  node-0:
+    build: .
+    container_name: chord-node-0
+    hostname: node-0
+    networks:
+    - chord_net
+    environment:
+    - IS_SEED=True
+    - PYTHONUNBUFFERED=1
+    ports:
+    - 5000:5000
+  node-1:
+    build: .
+    container_name: chord-node-1
+    hostname: node-1
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+    ports:
+    - 5001:5000
+  node-2:
+    build: .
+    container_name: chord-node-2
+    hostname: node-2
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+    ports:
+    - 5002:5000
+  node-3:
+    build: .
+    container_name: chord-node-3
+    hostname: node-3
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+    ports:
+    - 5003:5000
+  node-4:
+    build: .
+    container_name: chord-node-4
+    hostname: node-4
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+    ports:
+    - 5004:5000
+  node-5:
+    build: .
+    container_name: chord-node-5
+    hostname: node-5
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+    ports:
+    - 5005:5000
+  node-6:
+    build: .
+    container_name: chord-node-6
+    hostname: node-6
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-7:
+    build: .
+    container_name: chord-node-7
+    hostname: node-7
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-8:
+    build: .
+    container_name: chord-node-8
+    hostname: node-8
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-9:
+    build: .
+    container_name: chord-node-9
+    hostname: node-9
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-10:
+    build: .
+    container_name: chord-node-10
+    hostname: node-10
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-11:
+    build: .
+    container_name: chord-node-11
+    hostname: node-11
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-12:
+    build: .
+    container_name: chord-node-12
+    hostname: node-12
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-13:
+    build: .
+    container_name: chord-node-13
+    hostname: node-13
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-14:
+    build: .
+    container_name: chord-node-14
+    hostname: node-14
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-15:
+    build: .
+    container_name: chord-node-15
+    hostname: node-15
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-16:
+    build: .
+    container_name: chord-node-16
+    hostname: node-16
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-17:
+    build: .
+    container_name: chord-node-17
+    hostname: node-17
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-18:
+    build: .
+    container_name: chord-node-18
+    hostname: node-18
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-19:
+    build: .
+    container_name: chord-node-19
+    hostname: node-19
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-20:
+    build: .
+    container_name: chord-node-20
+    hostname: node-20
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-21:
+    build: .
+    container_name: chord-node-21
+    hostname: node-21
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-22:
+    build: .
+    container_name: chord-node-22
+    hostname: node-22
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-23:
+    build: .
+    container_name: chord-node-23
+    hostname: node-23
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-24:
+    build: .
+    container_name: chord-node-24
+    hostname: node-24
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-25:
+    build: .
+    container_name: chord-node-25
+    hostname: node-25
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-26:
+    build: .
+    container_name: chord-node-26
+    hostname: node-26
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-27:
+    build: .
+    container_name: chord-node-27
+    hostname: node-27
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-28:
+    build: .
+    container_name: chord-node-28
+    hostname: node-28
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-29:
+    build: .
+    container_name: chord-node-29
+    hostname: node-29
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-30:
+    build: .
+    container_name: chord-node-30
+    hostname: node-30
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-31:
+    build: .
+    container_name: chord-node-31
+    hostname: node-31
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-32:
+    build: .
+    container_name: chord-node-32
+    hostname: node-32
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-33:
+    build: .
+    container_name: chord-node-33
+    hostname: node-33
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-34:
+    build: .
+    container_name: chord-node-34
+    hostname: node-34
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-35:
+    build: .
+    container_name: chord-node-35
+    hostname: node-35
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-36:
+    build: .
+    container_name: chord-node-36
+    hostname: node-36
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-37:
+    build: .
+    container_name: chord-node-37
+    hostname: node-37
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-38:
+    build: .
+    container_name: chord-node-38
+    hostname: node-38
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-39:
+    build: .
+    container_name: chord-node-39
+    hostname: node-39
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-40:
+    build: .
+    container_name: chord-node-40
+    hostname: node-40
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-41:
+    build: .
+    container_name: chord-node-41
+    hostname: node-41
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-42:
+    build: .
+    container_name: chord-node-42
+    hostname: node-42
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-43:
+    build: .
+    container_name: chord-node-43
+    hostname: node-43
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-44:
+    build: .
+    container_name: chord-node-44
+    hostname: node-44
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-45:
+    build: .
+    container_name: chord-node-45
+    hostname: node-45
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-46:
+    build: .
+    container_name: chord-node-46
+    hostname: node-46
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-47:
+    build: .
+    container_name: chord-node-47
+    hostname: node-47
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-48:
+    build: .
+    container_name: chord-node-48
+    hostname: node-48
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+  node-49:
+    build: .
+    container_name: chord-node-49
+    hostname: node-49
+    networks:
+    - chord_net
+    depends_on:
+    - node-0
+    environment:
+    - IS_SEED=False
+    - KNOWN_NODE=node-0
+    - PYTHONUNBUFFERED=1
+networks:
+  chord_net:
+    driver: bridge
