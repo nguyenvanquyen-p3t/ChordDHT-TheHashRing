@@ -71,13 +71,20 @@ python analysis/simulate_queries.py --node-count 50 --queries 1000 --output anal
 Chạy toàn bộ N=10..50, mỗi lần tự tạo compose và restart Docker:
 
 ```powershell
-python analysis/run_experiments.py --node-counts 10,20,30,40,50 --queries 1000
+python analysis/run_experiments.py --node-counts 10,20,30,40,50 --queries 1000 --wait-seconds 80
 ```
+Thời gian chờ là 80 giây để các nút kết nối thành một vòng băm ổn định
 
 Kết quả:
 
 - CSV: `analysis/results/hop_results.csv`
 - Chart: `chord_analysis_chart.png`
+
+## Tắt docker
+
+```powershell
+docker-compose down
+```
 
 ## Lý do hop count gần O(log N)
 
